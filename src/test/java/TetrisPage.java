@@ -5,13 +5,13 @@ public class TetrisPage {
     protected WebDriver driver;
 
     private By head = By.xpath("//h1");
-    private By nicknameOnPage = By.xpath("//p/span[@id=\"name\"]");
-    private By currentGameSpeed = By.xpath("//*[@id='outSpeed']");
-    private By currentGameLevel = By.xpath("//*[@id='levelGame']");
-    private By plusSpeed = By.xpath("//*[@id='plusSpeed']");
-    private By minusSpeed = By.xpath("//*[@id='minusSpeed']");
-    private By plusLevel = By.xpath("//*[@id='plusLevel']");
-    private By minusLevel = By.xpath("//*[@id='minusLevel']");
+    private By nicknameOnPage = By.id("name");
+    private By currentGameSpeed = By.id("outSpeed");
+    private By currentGameLevel = By.id("levelGame");
+    private By plusSpeed = By.id("plusSpeed");
+    private By minusSpeed = By.id("minusSpeed");
+    private By plusLevel = By.id("plusLevel");
+    private By minusLevel = By.id("minusLevel");
 
     public TetrisPage(WebDriver driver) {
         this.driver = driver;

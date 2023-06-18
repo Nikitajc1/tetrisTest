@@ -4,8 +4,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TetrisTest {
     private WebDriver driver;
-    private String firstPage = "http://localhost:63342/tetris/tetrisTest/frontend/index.html?_ijt=gp3a937vqpo193e10salq6nuop&_ij_reload=RELOAD_ON_SAVE";
-    private String secondPage = "http://localhost:63342/tetris/tetrisTest/frontend/game.html?_ijt=6o4rd676ca67b65uqrjcblp09u&_ij_reload=RELOAD_ON_SAVE";
+    private String firstPage = "http://localhost:63342/tetris/frontend/index.html?_ijt=mog1i22qnu9etr2bvohietrrhh&_ij_reload=RELOAD_ON_SAVE";
+    private String secondPage = "http://localhost:63342/tetris/frontend/game.html?_ijt=mog1i22qnu9etr2bvohietrrhh&_ij_reload=RELOAD_ON_SAVE";
 
 
     @BeforeEach
@@ -63,7 +63,7 @@ public class TetrisTest {
         tetris.clickOnPlusSpeed();
         int speedAfterClick = tetris.getCurrentGameSpeed();
 
-        Assertions.assertTrue(speedAfterClick > speedBeforeClick);
+        Assertions.assertEquals(speedBeforeClick + 1, speedAfterClick);
     }
 
     @Test
@@ -79,7 +79,7 @@ public class TetrisTest {
         tetris.clickOnPlusLevel();
         int levelAfterClick = tetris.getCurrentGameLevel();
 
-        Assertions.assertTrue(levelAfterClick > levelBeforeClick);
+        Assertions.assertEquals(levelBeforeClick + 1, levelAfterClick);
     }
 
 }
