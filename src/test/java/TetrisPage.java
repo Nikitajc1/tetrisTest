@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 public class TetrisPage {
     protected WebDriver driver;
 
-    private By head = By.xpath("//h1");
+    private By head = By.cssSelector("h1");
     private By nicknameOnPage = By.id("name");
     private By currentGameSpeed = By.id("outSpeed");
     private By currentGameLevel = By.id("levelGame");
